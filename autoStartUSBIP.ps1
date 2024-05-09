@@ -1,4 +1,4 @@
-# C:\scripts\waitUntilWSL.ps1
+C:\scripts\waitUntilWSL.ps1
 
 Start-Sleep 1
 
