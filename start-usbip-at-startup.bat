@@ -1,0 +1,1 @@
+powershell -WindowStyle Hidden -File C:\scripts\autoStartUSBIP.ps1
