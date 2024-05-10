@@ -1,6 +1,10 @@
-C:\scripts\waitUntilWSL.ps1
+& $PSScriptRoot\waitUntilWSL.ps1
 
-Start-Sleep 1
+Start-Sleep 5
+
+# Install bash at docker-desktop distribution if necessary
+# Bash are necessary for usbipd-win
+wsl.exe -d docker-desktop -- apk add bash
 
 if ($null -ne $args ) {
     $targetPattern = $args[0]
@@ -34,7 +38,7 @@ New-BurntToastNotification -Text "USBIP will run with device $vidpid"
 
 while (1) {
     
-    C:\scripts\waitUntilWSL.ps1
+    & $PSScriptRoot\waitUntilWSL.ps1
 
     usbipd.exe bind --hardware-id $vidpid
 

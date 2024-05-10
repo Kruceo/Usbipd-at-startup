@@ -41,6 +41,14 @@ autoStartUSBIP.ps1 "your pattern"
 
 > Note: This script uses `BurntToast` but it is not necessary!
 
+#### TIP
+
+If your windows are blocking you to run this scripts, you can do this:
+
+```powershell
+Unblock-File -Path <script-path>
+```
+
 ## start-usbip-at-startup.bat
 
 This is just a script to run autoStartUSBIP.ps1 hidden at the startup of Windows.
