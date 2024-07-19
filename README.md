@@ -33,10 +33,22 @@ Check the pattern that you want to use:
 usbipd list
 ```
 
-Starts the script using the pattern of your choose:
+This will display any like this:
+```bash
+BUSID   VID:PID     DEVICE                      STATE
+3-1     03da:ab41   USB Printing Support        Not attached
+```
+
+First you will want bind the device with: 
+
+```bash
+usbipd bind --hardware-id <VID:PID>`.
+```
+
+Now start the script using the pattern that you choose:
 
 ```powershell
-autoStartUSBIP.ps1 "your pattern"
+autoStartUSBIP.ps1 <VID:PID|DEVICE>
 ```
 
 > Note: This script uses `BurntToast` but it is not necessary!
